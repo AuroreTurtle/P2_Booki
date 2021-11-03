@@ -163,11 +163,11 @@ form {
    transition: transform .1s;
 }
 
-/* grossissement au survol de la souris */
+/* grossissement de la carte au survol de la souris */
 .carte:hover {
-   -ms-transform: scale(1.3); /* IE 9 */
-   -webkit-transform: scale(1.3); /* Safari 3-8 */
-   transform: scale(1.3);
+   -ms-transform: scale(1.2); /* IE 9 */
+   -webkit-transform: scale(1.2); /* Safari 3-8 */
+   transform: scale(1.2);
 }
 
 .carte a {
@@ -210,6 +210,7 @@ form {
 #res-populaire {
    background-color: #F2F2F2;
    display: block;
+   width: 55%;
 }
 
 #titre-rubrique{
@@ -220,37 +221,48 @@ form {
 }
 
 .carte-populaire {
-   display: flex;
    background-color: white;
    border-radius: 15px;
-   width: 340px;
+   width: 320px;
    box-shadow: 10px 10px 12px #dad8d8;
-   padding: 1% 0 1% 1%;
+   margin: 0 5% 10% 5%;
+   transition: transform .1s;
+}
+
+/* grossissement de la carte au survol de la souris */
+.carte-populaire:hover {
+   -ms-transform: scale(1.1); /* IE 9 */
+   -webkit-transform: scale(1.1); /* Safari 3-8 */
+   transform: scale(1.1);
 }
 
 .carte-populaire a {
    color: rgb(10, 10, 10);
    text-decoration:none;
-}
-
-.carte-populaire-image {
-   height: 150px;
+   display: flex;
+   padding: 1%;
 }
 
 .carte-populaire-image img {
    border-radius: 15px 0 0 15px;
-   height: 100%;
+   height: 130px;
+   width: 110px;
    object-fit: cover;
 }
 
 .detail {
-   width: 70%;
-   background-color: red;
+   width: 80%;
 }
 
-.detail h3, .detail p, .etoile {
+.detail h3, .detail p {
    margin: 2%;
    padding-left: 5%;
+}
+
+.detail .etoile {
+   margin: 2%;
+   padding-left: 5%;
+   padding-top: 15%;
 }
 
 /* Activité à Marseille */
