@@ -1,15 +1,32 @@
-/* Ordi */
-/* Toute la page */
+/* ====================== 1 | Global ====================== */
+/* ----------- 1.1 | Général ----------- */
 * {
    /* border-box permet d'inclure le remplissage et la bordure dans la taille (width et height) de l'élément */
-    box-sizing: border-box; /* Opera/IE 8+ */
-    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
-    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+   box-sizing: border-box; /* Opera/IE 8+ */
+   -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+   -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
    font-family: 'Raleway', 'sans serif';
 }
 
+a {
+   color: rgb(10, 10, 10);
+   text-decoration:none;
+}
 
- /* Header */
+/* ----------- 1.2 | Notation avec des étoiles ----------- */
+/* Etoile bleue */
+.fa-star {
+   color: #0065FC;
+}
+
+/* Etoile grise */
+.gris {
+   color: #dad8d8;
+}
+
+
+/* ====================== 2 | Version Ordinateur ====================== */
+/* ----------- 2.1 | HEADER ----------- */
 #conteneur
 {
    display: flex;  
@@ -23,7 +40,7 @@
    height: 50px;
 }
 
-/* Menu de droite */
+/* Menu */
 #menu {
    list-style: none;
    display: flex;
@@ -31,8 +48,6 @@
 }
 
 #menu a {
-   color: rgb(10, 10, 10);
-   text-decoration:none;
    padding:10px;
 }
 
@@ -42,6 +57,7 @@
    padding: 10px;
 }
 
+/* ----------- 2.2 | SECTION : Recherche ----------- */
 /* Barre de recherche */
 form {
    display: flex;
@@ -141,13 +157,13 @@ form {
    border-radius: 20px;
 }
 
-/* Résultat de la recherche */
+/* ----------- 2.3 | SECTION : Resultats hebergement ----------- */
 #resultat {
    display: flex;
    justify-content: space-between;
 }
 
-/* Article hébergements à Marseille */
+/* 2.3.1 | ARTICLE : Résultats hébergement à Marseille */
 #res-hebergement {
    background-color: #F2F2F2;
    display: flex;
@@ -162,6 +178,7 @@ form {
    flex: 1 0 100%;
 }
 
+/* Carte */
 .carte {
    display: block;
    background-color: white;
@@ -177,11 +194,6 @@ form {
    -ms-transform: scale(1.2); /* IE 9 */
    -webkit-transform: scale(1.2); /* Safari 3-8 */
    transform: scale(1.2);
-}
-
-.carte a {
-   color: rgb(10, 10, 10);
-   text-decoration:none;
 }
 
 .carte-image {
@@ -201,21 +213,13 @@ form {
    padding-left: 5%;
 }
 
-.fa-star {
-   color: #0065FC;
-}
-
-.gris {
-   color: #dad8d8;
-}
-
 #afficher-plus {
    /* permet de mettre "afficher plus" en bas */
    order: 10;
    flex: 1 0 100%;
 }
 
-/* Article les plus populaires */
+/* 2.3.2 | ARTICLE : Résultats les plus populaires */
 #res-populaire {
    background-color: #F2F2F2;
    display: block;
@@ -229,6 +233,7 @@ form {
    margin: 2%;
 }
 
+/* Carte */
 .carte-populaire {
    background-color: white;
    border-radius: 15px;
@@ -246,8 +251,6 @@ form {
 }
 
 .carte-populaire a {
-   color: rgb(10, 10, 10);
-   text-decoration:none;
    display: flex;
    padding: 1%;
 }
@@ -274,7 +277,7 @@ form {
    padding-top: 15%;
 }
 
-/* Activité à Marseille */
+/* ----------- 2.4 | SECTION : Résultats activités à Marseille ----------- */
 #activite {
    display: flex;
    flex-wrap: wrap;
@@ -282,7 +285,7 @@ form {
    margin-right: 3%;
 }
 
-/* pour les grandes images */
+/* Carte avec les grandes images */
 .carte-activite-large {
    display: block;
    border-radius: 15px;
@@ -294,11 +297,6 @@ form {
 
 .carte-activite-large:hover {
    box-shadow: 10px 10px 12px #999898;
-}
-
-.carte-activite-large a {
-   color: rgb(10, 10, 10);
-   text-decoration:none;
 }
 
 .carte-activite-image-large {
@@ -313,7 +311,7 @@ form {
    object-fit: cover;
 }
 
-/* pour les petites images */
+/* Carte avec les petites images */
 .carte-double {
    display: flex;
    flex-direction: column;
@@ -335,11 +333,6 @@ form {
    box-shadow: 10px 10px 12px #999898;
 }
 
-.carte-activite a {
-   color: rgb(10, 10, 10);
-   text-decoration:none;
-}
-
 .carte-activite-image {
    height: 70%;
 }
@@ -358,7 +351,7 @@ form {
 }
 
 
- /* Footer */
+/* ----------- 2.5 | FOOTER ----------- */
 footer {
    background-color: #F2F2F2;
    display: flex;
@@ -376,8 +369,11 @@ footer li {
    padding-bottom: 10px;
 }
 
-/******************************************************/
-/* Tablette */
+
+/* ====================== 3 | MEDIA QUERIES ====================== */
+
+/* ----------- 3.1 | Version Tablette ----------- */
+
 @media screen and (min-width: 768px) and (max-width: 991px)
 {
    /* Filtres */
@@ -385,17 +381,17 @@ footer li {
       margin-bottom: 10px;
    }
 
-   /* Résultat de la recherche */
+   /* Résultats de la recherche */
    #resultat {
       flex-direction: column-reverse;
    }
 
-   /* Article hébergements à Marseille */
+   /* Résultats hébergements à Marseille */
    #res-hebergement {
       width: 100%;
    }
 
-   /* Les plus populaires */
+   /* Résultats les plus populaires */
    #res-populaire {
       width: 100%;
       margin-bottom: 15px;
@@ -413,8 +409,8 @@ footer li {
 }
 
 
-/****************************************************/
-/* Téléphone */
+/* ----------- 3.2 | Version Mobile ----------- */
+
 @media screen and (max-width: 767px)
 {
    /* Header */
@@ -434,7 +430,7 @@ footer li {
       align-self: center;
    }
 
-   /* Menu de droite */
+   /* Menu */
    #menu {
       justify-content: space-between;
       align-items: flex-start;
@@ -479,12 +475,12 @@ footer li {
       margin-bottom: 10px;
    }
 
-   /* Résultat de la recherche */
+   /* Résultats de la recherche */
    #resultat {  
       flex-direction: column-reverse;
    }
 
-   /* Article hébergements à Marseille */
+   /* Résultats hébergements à Marseille */
    #res-hebergement {
       background-color: white;
       width: 100%;
@@ -496,7 +492,7 @@ footer li {
       margin: 2%;
    }
 
-   /* Article les plus populaires */
+   /* Résultats les plus populaires */
    #res-populaire {   
       width: 100%;
       margin-bottom: 15px;
@@ -514,7 +510,7 @@ footer li {
    }
 
    /* Activité à Marseille */
-   /* pour les grandes images */
+   /* Carte avec les grandes images */
    .carte-activite-large {
       box-shadow: 1px 1px 12px #dad8d8;
       width: 80%;
@@ -529,7 +525,7 @@ footer li {
       padding: 0;
    }
 
-   /* pour les petites images */
+   /* Carte avec les petites images */
    .carte-double {  
       width: 85%;
    }
@@ -548,7 +544,6 @@ footer li {
    .carte-activite-image img {
       padding: 0;
    }
-
 
    /* Footer */
    footer {
