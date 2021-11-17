@@ -435,6 +435,7 @@ footer li {
       justify-content: space-between;
       align-items: flex-start;
       padding: 0;
+      margin-top: 10%;
    }
 
    #menu li {
@@ -443,11 +444,13 @@ footer li {
 
    #menu a {
       border-bottom: 2px solid #F2F2F2;
+      padding: 0 50px 10px 50px;
    }
 
    #menu a:hover {
       border-bottom: 2px solid #0065FC;
       border-top: none;
+      padding: 0 50px 10px 50px;
    }
 
    /* Barre de recherche */
@@ -471,6 +474,12 @@ footer li {
    }
 
    /* Filtres */
+   #filtre p {
+      /* permet de mettre le titre en haut sur toute la ligne et avoir les cartes en dessous */
+      order: -1;
+      flex: 1 0 100%;
+   }
+
    .filtre-item {
       margin-bottom: 10px;
    }
