@@ -33,7 +33,7 @@ a {
 	justify-content: space-between;
 }
 
-.items:nth-child(2) /* permet prendre le 2eme élément dans html grâce à nth-child(1) */
+.conteneur-items:nth-child(2) /* permet prendre le 2eme élément dans html grâce à nth-child(1) */
 {align-self: flex-end;}
 
 #conteneur img {
@@ -208,7 +208,7 @@ form {
    object-fit: cover;
 }
 
-.description h3, .description p, .etoile {
+.carte-description h3, .carte-description p, .carte-etoile {
    margin: 2%;
    padding-left: 5%;
 }
@@ -226,7 +226,7 @@ form {
    width: 55%;
 }
 
-#titre-rubrique{
+#res-populaire-titre{
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -262,16 +262,16 @@ form {
    object-fit: cover;
 }
 
-.detail {
+.carte-populaire-detail {
    width: 80%;
 }
 
-.detail h3, .detail p {
+.carte-populaire-detail h3, .carte-populaire-detail p {
    margin: 2%;
    padding-left: 5%;
 }
 
-.detail .etoile {
+.carte-populaire-detail .carte-populaire-etoile {
    margin: 2%;
    padding-left: 5%;
    padding-top: 15%;
@@ -426,7 +426,7 @@ footer li {
       width: 100px;
    }
 
-   .items:nth-child(2) {
+   .conteneur-items:nth-child(2) {
       align-self: center;
    }
 
@@ -542,7 +542,7 @@ footer li {
    .carte-activite {   
       margin-top: 4%;
       box-shadow: 1px 1px 12px #dad8d8;
-      width: 325px;
+      width: 95%;
       height: 140px;
    }
 
