@@ -24,3 +24,6 @@ votre intégration.
 * Implémenter une interface responsive
 * Intégrer du contenu conformément à une maquette
 
+## Lien vers la page :
+ https://auroreturtle.github.io/P2_Gourraud_Aurore/
+
