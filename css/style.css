@@ -13,6 +13,7 @@ a {
    text-decoration:none;
 }
 
+
 /* ----------- 1.2 | Notation avec des étoiles ----------- */
 /* Etoile bleue */
 .fa-star {
@@ -26,15 +27,20 @@ a {
 
 
 /* ====================== 2 | Version Ordinateur ====================== */
+main, header {
+   margin: 0 25px 0 25px;
+}
+
 /* ----------- 2.1 | HEADER ----------- */
-#conteneur
-{
+#conteneur {
    display: flex;  
 	justify-content: space-between;
 }
 
-.conteneur-items:nth-child(2) /* permet prendre le 2eme élément dans html grâce à nth-child(1) */
-{align-self: flex-end;}
+.conteneur-items:nth-child(2) {
+/* permet prendre le 2eme élément dans html grâce à nth-child( ) */
+   align-self: flex-end;
+}
 
 #conteneur img {
    height: 50px;
@@ -138,16 +144,18 @@ form {
 }
 
 .filtre-item i{
+   font-size: 18px;
    color: #0065FC;
    background-color: #DEEBFF;
    border-radius: 50%;
    margin-left: -5px;
    padding: 15px;
+   margin-right: 7px;
 }
 
 /* Info */
 .fa-info {
-   font-size: 12px;
+   font-size: 10px;
    color: #0065FC;
    border: 2px solid #F2F2F2;
    text-align: center;
@@ -290,8 +298,8 @@ form {
 #activite {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-around;
-   margin-right: 3%;
+   justify-content: space-between; 
+   margin-bottom: 4%;
 }
 
 /* Carte avec les grandes images */
@@ -301,7 +309,6 @@ form {
    width: 270px;
    height: 390px;
    box-shadow: 10px 10px 12px #dad8d8;
-   margin: 2%;
 }
 
 .carte-activite-large:hover {
@@ -309,12 +316,11 @@ form {
 }
 
 .carte-activite-image-large {
-   height: 85%;
+   height: 90%;
 }
 
 .carte-activite-image-large img {
    border-radius: 15px 15px 0 0;
-   padding: 0 0 5px 0;
    width: 100%;
    height: 100%;
    object-fit: cover;
@@ -325,17 +331,63 @@ form {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   margin-top: 2%;
-   margin-bottom: 2%;
+   
 }
 
+/* Carte avec les petites images de taille differentes */
+.carte-activite-moyenne {
+   display: block;
+   border-radius: 15px;
+   width: 270px;
+   height: 210px;
+   box-shadow: 10px 10px 12px #dad8d8;
+}
+
+.carte-activite-moyenne:hover {
+   box-shadow: 10px 10px 12px #999898;
+}
+
+.carte-activite-moyenne-image {
+   height: 82%;
+}
+
+.carte-activite-moyenne-image img {
+   border-radius: 15px 15px 0 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.carte-activite-petite {
+   display: block;
+   border-radius: 15px;
+   width: 270px;
+   height: 140px;
+   box-shadow: 10px 10px 12px #dad8d8;
+}
+
+.carte-activite-petite:hover {
+   box-shadow: 10px 10px 12px #999898;
+}
+
+.carte-activite-petite-image {
+   height: 70%;
+}
+
+.carte-activite-petite-image img {
+   border-radius: 15px 15px 0 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Carte avec les petites images de la même taille */
 .carte-activite {
    display: block;
    border-radius: 15px;
    width: 270px;
-   height: 170px;
+   height: 180px;
    box-shadow: 10px 10px 12px #dad8d8;
-   margin: 2%;
 }
 
 .carte-activite:hover {
@@ -343,21 +395,20 @@ form {
 }
 
 .carte-activite-image {
-   height: 70%;
+   height: 78%;
 }
 
 .carte-activite-image img {
    border-radius: 15px 15px 0 0;
-   padding: 0 0 5px 0;
    width: 100%;
    height: 100%;
    object-fit: cover;
 }
 
+/* Titre des cartes */
 .titre-activite {
    font-size: 13px;
    margin-left: 5%;
-   padding: 0;
 }
 
 
@@ -420,15 +471,42 @@ footer li {
 
    /* Résultats activités à Marseille */
    #activite {
-   margin-bottom: 3%;
+      justify-content: space-around; 
+   }
+
+   /* Carte avec les grandes images */
+   .carte-activite-large {
+      margin-bottom: 3%;
+   }
+
+   /* Carte avec les petites images de taille differentes */
+   .carte-activite-moyenne {
+      height: 180px;
+   }
+   
+   .carte-activite-petite {
+      margin-bottom: 8%;
+      height: 180px;
+   }
+
+   .carte-activite-petite-image, .carte-activite-moyenne-image {
+      height: 78%;
+   }
+
+   /* Carte avec les petites images de la même taille */
+   .carte-activite {
+      margin-bottom: 8%;
    }
 }
-
 
 /* ----------- 3.2 | Version Mobile ----------- */
 
 @media screen and (max-width: 767px)
 {
+   main, header {
+      margin: 0;
+   }
+
    /* Header */
    #conteneur {
       display: flex; 
@@ -442,6 +520,10 @@ footer li {
       width: 100px;
    }
 
+   .conteneur-items {
+      width: 100%;
+   }
+
    .conteneur-items:nth-child(2) {
       align-self: center;
    }
@@ -451,7 +533,7 @@ footer li {
       justify-content: space-between;
       align-items: flex-start;
       padding: 0;
-      margin-top: 10%;
+      margin-top: 7%;
    }
 
    #menu li {
@@ -460,13 +542,22 @@ footer li {
 
    #menu a {
       border-bottom: 2px solid #F2F2F2;
-      padding: 0 50px 10px 50px;
+      padding: 0 63px 10px 62px;
    }
 
    #menu a:hover {
       border-bottom: 2px solid #0065FC;
       border-top: none;
-      padding: 0 50px 10px 50px;
+      padding: 0 63px 10px 62px;
+   }
+
+   /* SECTION : Recherche */
+   #debut {
+      margin: 0 25px 0 25px;
+   }
+
+   h1 {
+      font-size: 25px;
    }
 
    /* Barre de recherche */
@@ -511,6 +602,10 @@ footer li {
       width: 100%;
    }
 
+   #hebergement {
+      margin-left: 5%;
+   }
+
    .carte {
       width: 85%;
       box-shadow: 1px 1px 12px #dad8d8;
@@ -525,6 +620,7 @@ footer li {
    #res-populaire {   
       width: 100%;
       margin-bottom: 15px;
+      border-radius: 0;
    }
 
    .carte-populaire {
@@ -533,21 +629,34 @@ footer li {
    }
 
    .carte-populaire-image img {
-      height: 130px;
-      width: 110px;
+      height: 145px;
+      width: 130px;
       margin-top: 1%;
    }
 
+   .carte-populaire-detail {
+      margin-top: 9px;
+   }
+
    /* Activité à Marseille */
+   #activites {
+      margin-left: 5%;
+   }
+
+   #activite {
+      justify-content: space-around; 
+   }
+
    /* Carte avec les grandes images */
    .carte-activite-large {
+      margin-top: 4%;
       box-shadow: 1px 1px 12px #dad8d8;
       width: 80%;
-      height: 140px;
+      height: 170px;
    }
 
    .carte-activite-image-large {
-      height: 65%;
+      height: 75%;
    }
 
    /* Carte avec les petites images */
@@ -555,21 +664,48 @@ footer li {
       width: 85%;
    }
 
-   .carte-activite {   
-      margin-top: 4%;
+   /* Carte avec les petites images de taille differentes */
+   .carte-activite-moyenne {   
+      margin-top: 5%;
+      margin-left: 2%;
       box-shadow: 1px 1px 12px #dad8d8;
       width: 95%;
-      height: 140px;
+      height: 170px;
+   }
+
+   .carte-activite-moyenne-image {
+      height: 75%;
+   }
+
+   .carte-activite-petite {   
+      margin-top: 5%;
+      margin-left: 2%;
+      box-shadow: 1px 1px 12px #dad8d8;
+      width: 95%;
+      height: 170px;
+   }
+
+   .carte-activite-petite-image {
+      height: 75%;
+   }
+
+   /* Carte avec les petites images de la même taille */
+   .carte-activite {   
+      margin-top: 5%;
+      margin-left: 2%;
+      box-shadow: 1px 1px 12px #dad8d8;
+      width: 95%;
+      height: 170px;
    }
 
    .carte-activite-image {
-      height: 65%;
+      height: 75%;
    }
 
    /* Footer */
    footer {
       flex-direction: column;
       margin-top: 5%;
-      padding-top:5%;
+      padding:5% 0 5% 10%;
    }
 }
