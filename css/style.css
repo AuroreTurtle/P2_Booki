@@ -178,7 +178,7 @@ form {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
-   margin-right: 1%;
+   margin-right: 2%;
    border-radius: 25px;
 }
 
@@ -202,9 +202,9 @@ form {
 
 /* grossissement de la carte au survol de la souris */
 .carte:hover {
-   -ms-transform: scale(1.2); /* IE 9 */
-   -webkit-transform: scale(1.2); /* Safari 3-8 */
-   transform: scale(1.2);
+   -ms-transform: scale(1.1); /* IE 9 */
+   -webkit-transform: scale(1.1); /* Safari 3-8 */
+   transform: scale(1.1);
 }
 
 .carte-image {
@@ -234,7 +234,9 @@ form {
 /* 2.3.2 | ARTICLE : Résultats les plus populaires */
 #res-populaire {
    background-color: #F2F2F2;
-   display: block;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
    width: 55%;
    border-radius: 25px;
 }
@@ -255,7 +257,7 @@ form {
 .carte-populaire {
    background-color: white;
    border-radius: 15px;
-   width: 320px;
+   width: 90%;
    box-shadow: 10px 10px 12px #dad8d8;
    margin: 0 5% 10% 5%;
    transition: transform .1s;
@@ -307,7 +309,7 @@ form {
 .carte-activite-large {
    display: block;
    border-radius: 15px;
-   width: 270px;
+   width: 295px;
    height: 390px;
    box-shadow: 10px 10px 12px #dad8d8;
 }
@@ -339,7 +341,7 @@ form {
 .carte-activite-moyenne {
    display: block;
    border-radius: 15px;
-   width: 270px;
+   width: 295px;
    height: 210px;
    box-shadow: 10px 10px 12px #dad8d8;
 }
@@ -362,7 +364,7 @@ form {
 .carte-activite-petite {
    display: block;
    border-radius: 15px;
-   width: 270px;
+   width: 295px;
    height: 140px;
    box-shadow: 10px 10px 12px #dad8d8;
 }
@@ -386,7 +388,7 @@ form {
 .carte-activite {
    display: block;
    border-radius: 15px;
-   width: 270px;
+   width: 295px;
    height: 180px;
    box-shadow: 10px 10px 12px #dad8d8;
 }
@@ -543,7 +545,7 @@ footer li {
 
    #menu a {
       border-bottom: 2px solid #F2F2F2;
-      padding: 0 63px 10px 62px;
+      padding: 0 60px 10px 60px;
    }
 
    #menu a:hover {
@@ -555,6 +557,7 @@ footer li {
    /* SECTION : Recherche */
    #debut {
       margin: 0 25px 0 25px;
+      width: 100%;
    }
 
    h1 {
@@ -562,6 +565,11 @@ footer li {
    }
 
    /* Barre de recherche */
+   #recherche-barre {
+      width: 255px;
+      font-size: 18px;
+   }
+
    #recherche button {
       width: 45px;
       height: 40px;
@@ -619,7 +627,7 @@ footer li {
 
    /* Résultats les plus populaires */
    #res-populaire {   
-      width: 100%;
+      width: 110%;
       margin-bottom: 15px;
       border-radius: 0;
    }
@@ -705,6 +713,7 @@ footer li {
 
    /* Footer */
    footer {
+      width: 110%;
       flex-direction: column;
       margin-top: 5%;
       padding:5% 0 5% 10%;
