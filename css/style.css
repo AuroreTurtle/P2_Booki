@@ -37,11 +37,6 @@ main, header {
 	justify-content: space-between;
 }
 
-.conteneur-items:nth-child(2) {
-/* permet prendre le 2eme élément dans html grâce à nth-child( ) */
-   align-self: flex-end;
-}
-
 #conteneur img {
    height: 50px;
 }
@@ -524,17 +519,12 @@ footer li {
    }
 
    .conteneur-items {
-      width: 100%;
-   }
-
-   .conteneur-items:nth-child(2) {
-      align-self: center;
+      width: 110%;
    }
 
    /* Menu */
    #menu {
       justify-content: space-between;
-      align-items: flex-start;
       padding: 0;
       margin-top: 7%;
    }
