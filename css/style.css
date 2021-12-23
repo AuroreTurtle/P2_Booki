@@ -598,7 +598,7 @@ footer li {
    /* Résultats hébergements à Marseille */
    #res-hebergement {
       background-color: white;
-      width: 100%;
+      width: 105%;
    }
 
    #hebergement {
@@ -644,6 +644,7 @@ footer li {
 
    #activite {
       justify-content: space-around; 
+      width: 105%;
    }
 
    /* Carte avec les grandes images */
