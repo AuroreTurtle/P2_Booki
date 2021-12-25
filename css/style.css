@@ -519,7 +519,7 @@ footer li {
    }
 
    .conteneur-items {
-      width: 110%;
+      width: 100%;
    }
 
    /* Menu */
@@ -541,7 +541,7 @@ footer li {
    #menu a:hover {
       border-bottom: 2px solid #0065FC;
       border-top: none;
-      padding: 0 63px 10px 62px;
+      padding: 0 60px 10px 60px;
    }
 
    /* SECTION : Recherche */
