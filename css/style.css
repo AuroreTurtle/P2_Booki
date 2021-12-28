@@ -1,3 +1,23 @@
+/* Index 
+1 | Global
+   1.1 | Général
+   1.2 | Notation avec des étoiles
+
+2 | Version Ordinateur
+   2.1 | HEADER
+   2.2 | SECTION : Recherche
+   2.3 | SECTION : Résultats hébergement
+      2.3.1 | ARTICLE : Résultats hébergement à Marseille
+      2.3.2 | ARTICLE : Résultats les plus populaires
+   2.4 | SECTION : Résultats activités à Marseille
+   2.5 | FOOTER
+   
+3 | MEDIA QUERIES
+   3.1 | Version Tablette
+   3.2 | Version Mobile
+*/
+
+
 /* ====================== 1 | Global ====================== */
 /* ----------- 1.1 | Général ----------- */
 * {
@@ -161,7 +181,7 @@ form {
    border-radius: 20px;
 }
 
-/* ----------- 2.3 | SECTION : Resultats hebergement ----------- */
+/* ----------- 2.3 | SECTION : Résultats hébergement ----------- */
 #resultat {
    display: flex;
    justify-content: space-between;
